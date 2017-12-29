@@ -75,8 +75,6 @@ class Lembur_PegawaiController extends Controller
      */
     public function edit($id)
     {
-        //
-
          $Lembur_Pegawai=Lembur_Pegawai::findOrFail($id);
          $Pegawai=Pegawai::all();
          $Kategori_Lembur=Kategori_Lembur::all();

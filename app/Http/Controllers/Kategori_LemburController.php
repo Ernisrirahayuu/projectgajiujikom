@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Input;
-use Illuminate\http\Request;
-
+use Request;
+use DB;
 use App\Golongan;
 use App\Kategori_Lembur;
 use App\Jabatan;
@@ -106,7 +106,7 @@ class Kategori_LemburController extends Controller
     public function update(Request $request, $id)
     {
         //
-         $Kategori_LemburUpdate=Request::all();
+        $Kategori_LemburUpdate=Request::all();
         $Kategori_Lembur=Kategori_Lembur::find($id);
         $Kategori_Lembur->update($Kategori_LemburUpdate);
         return redirect('Kategori_Lembur');

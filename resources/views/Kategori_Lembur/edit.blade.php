@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
             <div class="panel panel-default">
-                <div class="panel-heading"><center><font color="black" size="6%">Create Jabatan</font></div>
+                <div class="panel-heading"><center><font color="black" size="6%">Edit Kategori Lembur</font></div>
 </center>
                 <div class="panel-body">
   {!! Form::model($Kategori_Lembur,['method' => 'PATCH','route'=>['Kategori_Lembur.update',$Kategori_Lembur->id]]) !!}
@@ -12,7 +12,6 @@
 
       <div class="form-group">
             <select class="form-control" name="jabatan_id">   
-            <option>--Daftar Jabatan--</option>
             @foreach ($Jabatan as $data)
             <option value='{!! $data->id !!}'>{!! $data->Nama_Jabatan !!}</option>
             @endforeach
@@ -21,7 +20,6 @@
 
        <div class="form-group">
             <select class="form-control" name="golongan_id">   
-            <option>--Daftar Golongan--</option>
             @foreach ($Golongan as $data)
             <option value='{!! $data->id !!}'>{!! $data->Nama_Golongan !!}</option>
             @endforeach

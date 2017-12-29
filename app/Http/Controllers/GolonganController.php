@@ -96,16 +96,17 @@ class GolonganController extends Controller
     public function update(Request $request, $id)
     {
         //
-        $Golongan=Golongan::find($id);
-         $this -> validate($request, [
-            'Kode_Golongan' => 'required|min:3|unique:Golongan',
-            ]);
 
-        $Golong = new Golongan;
-        $Golong->Kode_Golongan = $request->get('Kode_Golongan');
-        $Golong->Nama_Golongan = $request->get('Nama_Golongan');
-        $Golong->Besaran_Uang = $request->get('Besaran_Uang');
-        $Golong->save();
+        $Golongan = Golongan::find($id);
+
+        $this -> validate($request, [
+            'Kode_Golongan' => 'required|min:3',
+            ]);
+        $Golongan->Kode_Golongan = $request->get('Kode_Golongan');
+        $Golongan->Nama_Golongan = $request->get('Nama_Golongan');
+        $Golongan->Besaran_Uang = $request->get('Besaran_Uang');
+
+        $Golongan->save();
         return redirect('Golongan'); 
     }
 

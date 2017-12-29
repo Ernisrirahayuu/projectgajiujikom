@@ -129,7 +129,10 @@ class PenggajianController extends Controller
      */
     public function edit($id)
     {
-        //
+         $Status_pengambilan=Status_pengambilan::all();
+      
+        return view('Penggajian.edit',compact('Status_pengambilan'));
+
     }
 
     /**

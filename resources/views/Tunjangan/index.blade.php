@@ -38,10 +38,10 @@
 						<td><center>{{ $data->Jumlah_Anak }}</center></td>
 					<td><center><?php echo 'Rp.'. number_format($data->Besaran_Uang, 2,",","."); ?>
              </center></td>
-						<td><center><a href="{{ route('Tunjangan.edit', $data->id) }}" class="btn btn-warning">Ubah</a></center></td>
+						<td><center><a href="{{ route('Tunjangan.edit', $data->id) }}" class="btn btn-warning">Update</a></center></td>
 						<td><center>
 							{!! Form::open(['method' => 'DELETE', 'route' => ['Tunjangan.destroy', $data->id]]) !!}
-							{!! Form::submit('Hapus', ['class' => 'btn btn-danger']) !!}
+							{!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
 							{!! Form::close() !!}
 						</center></td>
 					</tr>

@@ -1,10 +1,10 @@
 @extends('layouts.app')
 @section('content')
             <div class="panel panel-default">
-                <div class="panel-heading"><center><font color="black" size="6%">Create Golongan</font></div>
+                <div class="panel-heading"><center><font color="black" size="6%">Edit Golongan</font></div>
 </center>
-                <div class="panel-body">
-   {!! Form::model($Golongan,['method' => 'PATCH','route'=>['Golongan.update',$Golongan->id]]) !!}
+                <div class="panel-body">  
+                {!! Form::model($Golongan,['method' => 'PATCH','route'=>['Golongan.update',$Golongan->id]]) !!}
     <div class="form-group">
         {!! Form::label('Kode Golongan', 'Kode Golongan') !!}
         {!! Form::text('Kode_Golongan',null,['class'=>'form-control','required']) !!}

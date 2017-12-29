@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
             <div class="panel panel-default">
-                <div class="panel-heading"><center><font color="black" size="6%">Create Jabatan</font></div>
+                <div class="panel-heading"><center><font color="black" size="6%">Edit Jabatan</font></div>
 </center>
                 <div class="panel-body">  
                 {!! Form::model($Jabatan,['method' => 'PATCH','route'=>['Jabatan.update',$Jabatan->id]]) !!}
